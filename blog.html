@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Css link -->
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- Tailwind and daisy ui cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="sticky top-0">
+        <!-- Navbar -->
+        <div class="bg-[#F9F7F3] ">
+          <nav class="w-4/5 mx-auto pb-7 pt-4 ">
+            <div class="navbar p-0 ">
+              <div class="navbar-start">
+                <a href="./index.html" class="btn px-8 py-2 bg-[#B4F461] rounded-lg text-xl font-semibold">Home</a>
+              </div>
+              <div class="navbar-center">
+                <div class="flex items-center">
+                  <img class="mr-3" src="./assets/logo.png" alt="">
+                  <h2 class="text-xl font-bold">Donate Bangladesh</h2>
+                </div>
+              </div>
+              <div class="navbar-end">
+                <div>
+                  <img src="./assets/coin.png" alt="Coin Image">
+                </div>
+                <div>
+                  <span class="text-[#111111b3] ml-2 font-medium text-xl">5500</span>
+                  <span class="text-[#111111b3] font-medium text-xl">BDT</span>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+    
+        <!-- Buttons
+        <div class="pt-8 flex justify-center gap-4 pb-8 backdrop-filter backdrop-blur-lg">
+          <button
+            class=" rounded-lg bg-[#B4F461] px-6 py-4 text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out">Donation</button>
+    
+          <button
+            class=" rounded-lg bg-transparent border border-[#1111114d] px-6 py-4 text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out text-[#11111199]">History</button>
+        </div> -->
+      </header>
+
+      <main class="w-4/5 mx-auto pb-7 pt-4 ">
+        <div class="flex items-center pb-8">
+            <h1 class="font-black text-3xl">Important FAQ</h1>
+            <img src="./assets/icons8-faq-50.png" alt="">
+        </div>
+
+
+        <!-- Accordion -->
+         <div>
+
+            <div class="join join-vertical w-full shadow">
+                <div class="collapse collapse-arrow join-item border-base-300 border p-3">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                  <div class="collapse-content">
+                    <p>hello</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border p-3">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select the element from DOM?</div>
+                  <div class="collapse-content">
+                    <p>hello</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border p-3">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is the event delegation in the context of DOM, and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p>hello</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border p-3">
+                    <input type="radio" name="my-accordion-4"  />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                </div>
+              </div>
+
+
+
+         </div>
+      </main>
+    
+      <script src="./js/script.js"></script>
+      <script src="./js/utilities.js"></script>
+</body>
+</html>
