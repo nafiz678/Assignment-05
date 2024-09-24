@@ -3,3 +3,23 @@
 *{
     font-family: "Lexend", sans-serif;
 }
+
+#btn-card:focus{
+    
+    color: #111111;
+}
+
+#btn-history:focus{
+    
+    color: #111111;
+}
+
+
+@media only screen and (max-width: 576px) {
+    /* #logo{
+        display: none;
+    } */
+    .cards{
+        flex-direction: column;
+    }
+  }

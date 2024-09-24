@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,32 +12,77 @@
 
 </head>
 <body>
-    <header class="sticky top-0">
+    <header class="sticky top-0 z-10">
         <!-- Navbar -->
         <div class="bg-[#F9F7F3] ">
-          <nav class="w-4/5 mx-auto pb-7 pt-4 ">
+          <nav class="w-4/5 mx-auto lg:pb-7 pb-5 pt-4">
+    
+    
+            <!-- logo for small devices -->
+            <div class="navbar-start lg:hidden inline-flex">
+              <div class="flex items-center">
+                <img class="mr-3" src="./assets/logo.png" alt="">
+                <h2 class="text-xl font-bold">Donate Bangladesh</h2>
+              </div>
+            </div>
+    
+    
             <div class="navbar p-0 ">
-              <div class="navbar-start">
+    
+              <div class="navbar-start hidden lg:inline-flex">
                 <a href="./index.html" class="btn px-8 py-2 bg-[#B4F461] rounded-lg text-xl font-semibold">Home</a>
               </div>
-              <div class="navbar-center">
+    
+              <div class="navbar-center hidden lg:inline-flex">
                 <div class="flex items-center">
                   <img class="mr-3" src="./assets/logo.png" alt="">
                   <h2 class="text-xl font-bold">Donate Bangladesh</h2>
                 </div>
               </div>
-              <div class="navbar-end">
+    
+    
+              <div class="navbar-end hidden lg:inline-flex ">
                 <div>
                   <img src="./assets/coin.png" alt="Coin Image">
                 </div>
                 <div>
-                  <span class="text-[#111111b3] ml-2 font-medium text-xl">5500</span>
-                  <span class="text-[#111111b3] font-medium text-xl">BDT</span>
+                  <span  class="text-[#111111b3] ml-2 font-bold text-xl ">5500</span>
+                  <span class="text-[#111111b3] font-bold text-xl">BDT</span>
                 </div>
-              </div>
+                </div>
+    
+                
+    
+    
+    
+                 <!-- button for small devices -->
+                 <div class="navbar-start lg:hidden pt-4">
+                  <a href="./index.html" class="btn lg:px-8 lg:py-2 px-6 py-2 bg-[#B4F461] rounded-lg lg:text-xl text-base font-semibold ">Home</a>
+                 </div>
+    
+    
+                  <!-- Amount small devices -->
+                   <div class="lg:hidden navbar-end pt-4">
+                    <div class=" lg:hidden ">
+                      <img src="./assets/coin.png" alt="Coin Image">
+                    </div>
+                    <div>
+                      <span class="text-[#111111b3] ml-2 font-bold text-xl ">5500</span>
+                      <span class="text-[#111111b3] font-bold text-xl">BDT</span>
+                    </div>
+                   </div>
+               
+    
+    
+    
+    
+    
+    
+    
             </div>
           </nav>
         </div>
+    
     
         <!-- Buttons
         <div class="pt-8 flex justify-center gap-4 pb-8 backdrop-filter backdrop-blur-lg">
@@ -94,6 +139,7 @@
 
          </div>
       </main>
+
     
       <script src="./js/script.js"></script>
       <script src="./js/utilities.js"></script>

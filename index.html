@@ -12,51 +12,72 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-
 <body>
 
   <header class="sticky top-0">
     <!-- Navbar -->
     <div class="bg-[#F9F7F3] ">
-      <nav class="w-4/5 mx-auto pb-7 pt-4 ">
+      <nav class="w-4/5 mx-auto lg:pb-7 pb-5 pt-4">
+
+
+        <!-- logo for small devices -->
+        <div class="navbar-start lg:hidden inline-flex">
+          <div class="flex items-center">
+            <img class="mr-3" src="./assets/logo.png" alt="">
+            <h2 class="text-xl font-bold">Donate Bangladesh</h2>
+          </div>
+        </div>
+        
         <div class="navbar p-0 ">
-          <div class="navbar-start">
+          
+          
+          <!-- button for small devices -->
+          <div class="navbar-start lg:hidden pt-4">
+           <a href="./blog.html" class="btn lg:px-8 lg:py-2 px-6 py-2 bg-[#B4F461] rounded-lg lg:text-xl text-base font-semibold ">Blog</a>
+          </div>
+
+
+          <div class="navbar-start hidden lg:inline-flex">
             <a href="./blog.html" class="btn px-8 py-2 bg-[#B4F461] rounded-lg text-xl font-semibold">Blog</a>
           </div>
-          <div class="navbar-center">
+
+          <div class="navbar-center hidden lg:inline-flex">
             <div class="flex items-center">
               <img class="mr-3" src="./assets/logo.png" alt="">
               <h2 class="text-xl font-bold">Donate Bangladesh</h2>
             </div>
           </div>
-          <div class="navbar-end">
+
+
+          <div class="navbar-end pt-4 lg:pt-0">
             <div>
               <img src="./assets/coin.png" alt="Coin Image">
             </div>
             <div>
-              <span class="text-[#111111b3] ml-2 font-medium text-xl">5500</span>
-              <span class="text-[#111111b3] font-medium text-xl">BDT</span>
+              <span id="main-balance" class="text-[#111111b3] ml-2 font-bold text-xl ">5500</span>
+              <span class="text-[#111111b3] font-bold text-xl">BDT</span>
             </div>
-          </div>
+            </div>
+           
         </div>
       </nav>
     </div>
 
     <!-- Buttons -->
-    <div class="pt-8 flex justify-center gap-4 pb-8 backdrop-filter backdrop-blur-lg">
-      <button
-        class=" rounded-lg bg-[#B4F461] px-6 py-4 text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out">Donation</button>
+    <div class="lg:pt-8 lg:pb-8 pt-4 pb-4 flex justify-center gap-4 backdrop-filter backdrop-blur-lg">
+      <button id="btn-card"
+        class=" rounded-lg bg-[#B4F461] lg:px-6 lg:py-4 px-4 py-2 text-base lg:text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out">Donation</button>
 
-      <button
-        class=" rounded-lg bg-transparent border border-[#1111114d] px-6 py-4 text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out text-[#11111199]">History</button>
+      <button id="btn-history"
+        class=" rounded-lg bg-transparent border-2 lg:px-6 lg:py-4 px-4 py-2 text-base lg:text-xl font-semibold hover:bg-gray-300 transition-colors duration-400 ease-in-out text-[#11111199]">History</button>
     </div>
   </header>
 
 
   <!-- Cards section -->
-  <section class="grid gap-y-8">
+  <section id="card-section" class="grid gap-y-8">
      <!-- Card 1 -->
-    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8">
+    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8 cards">
       <div class="flex-1">
         <img src="./assets/noakhali.png" alt="">
       </div>
@@ -64,24 +85,24 @@
       <div class="flex-1 space-y-4">
         <div class="p-[10px] inline-flex items-center bg-[#1111110d]  rounded-lg">
           <img class="mr-3 inline-flex" src="./assets/coin.png" alt="">
-          <span class="mr-1 text-[#111111b3]">40</span>
+          <span id="card-donation-amount" class="mr-1 text-[#111111b3] ">10104</span>
           <span class=" text-[#111111b3]">BDT</span>
         </div>
-        <h2 class="font-bold text-xl text-[#111111]">Donate for Flood at Noakhali, Bangladesh</h2>
+        <h2 id="donate-title" class="font-bold text-xl text-[#111111]">Donate for Flood at Noakhali, Bangladesh</h2>
         <p class="text-[#111111b3] font-light"> The recent floods in Noakhali have caused significant damage to homes
           infrastructure. Your donation will help provide essential supplies and to those affected by this disaster.
           Every contribution, big or small, makes difference. Please join us in supporting the relief efforts and making
           a positive impact on the lives of those in need.</p>
-        <input type="text" placeholder="Write Donation Amount"
+        <input id="input-donate-amount" type="text" placeholder="Write Donation Amount"
           class="input w-full border border-solid border-[#1111111a] p-4">
-        <button class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
+        <button id="donate-now" class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
       </div>
 
     </div>
 
 
      <!-- Card 2 -->
-    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8">
+    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8 cards">
       <div class="flex-1">
         <img src="./assets/feni.png" alt="">
       </div>
@@ -89,44 +110,63 @@
       <div class="flex-1 space-y-4">
         <div class="p-[10px] inline-flex items-center bg-[#1111110d]  rounded-lg">
           <img class="mr-3 inline-flex" src="./assets/coin.png" alt="">
-          <span class="mr-1 text-[#111111b3]">6000</span>
+          <span id="card-donation-amount-2" class="mr-1 text-[#111111b3]">6000</span>
           <span class=" text-[#111111b3]">BDT</span>
         </div>
-        <h2 class="font-bold text-xl text-[#111111]">Donate for Flood Relief in Feni,Bangladesh</h2>
+        <h2 id="donate-title-2" class="font-bold text-xl text-[#111111]">Donate for Flood Relief in Feni,Bangladesh</h2>
         <p class="text-[#111111b3] font-light"> The recent floods in Feni have devastated local communities, leading to
           severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean
           water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and
           help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real
           difference. Please consider donating today to assist those in urgent need.</p>
-        <input type="text" placeholder="Write Donation Amount"
+        <input id="input-donate-amount-2" type="text" placeholder="Write Donation Amount"
           class="input w-full border border-solid border-[#1111111a] p-4">
-        <button class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
+        <button id="donate-now-2" class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
+        <!-- Open the modal using ID.showModal() method -->
+
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box text-center">
+    <h3 class="text-2xl font-extrabold pb-4 ">Congrats!</h3>
+    <img class="w-7 mx-auto mb-3" src="./assets/coin.png" alt="">
+    <p class="capitalize text-[#111111b3]">You have donated for mankind</p>
+    <p class="text-[#111111b3] font-bold">Successfully</p>
+    <div class="modal-action justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+        
       </div>
 
     </div>
 
 
      <!-- Card 3 -->
-    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8">
+    <div class="w-[79.2%] mx-auto flex items-center p-8 border rounded-2xl gap-8 cards">
       <div class="flex-1">
         <img src="./assets/quota-protest.png" alt="">
       </div>
       <div class="flex-1 space-y-4">
         <div class="p-[10px] inline-flex items-center bg-[#1111110d] rounded-lg">
           <img class="mr-3 inline-flex" src="./assets/coin.png" alt="">
-          <span class="mr-1 text-[#111111b3]">20000</span>
+          <span id="card-donation-amount-3" class="mr-1 text-[#111111b3]">20000</span>
           <span class=" text-[#111111b3]">BDT</span>
         </div>
-        <h2 class="font-bold text-xl text-[#111111]">Aid for Injured in the Quota Movement</h2>
+        <h2 id="donate-title-3" class="font-bold text-xl text-[#111111]">Aid for Injured in the Quota Movement</h2>
         <p class="text-[#111111b3] font-light"> The recent Quota movement has resulted in numerous injuries and
           significant hardship for many individuals. Your support is crucial in providing medical assistance,
           rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured
           individuals receive the care and support they need during this challenging time. Every donation plays a vital
           role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support
           these brave individuals in their time of need.</p>
-        <input type="text" placeholder="Write Donation Amount"
-          class="input w-full border border-solid border-[#1111111a] p-4">
-        <button class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
+        <input id="input-donate-amount-3" type="text"  placeholder="Write Donation Amount"
+          class="input w-full border border-solid border-[#1111111a] p-4" required/>
+        <button  id="donate-now-3" class="btn btn-success w-full bg-[#B4F461] border-none hover:bg-gray-300 text-xl ">Donate Now</button>
       </div>
 
     </div>
@@ -136,7 +176,7 @@
 
 
   <!-- History section -->
-  <section class="grid gap-y-7">
+  <section id="history-section" class="hidden space-y-6">
 
   </section>
 
@@ -146,8 +186,8 @@
 
 
 
-  <script src="./js/script.js"></script>
   <script src="./js/utilities.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
