@@ -30,7 +30,7 @@ function donateNowButton (id, amount, title)
         let month = monthNames[j];
         let date = n.getDate();
         let year = n.getFullYear();
-        let hours = n.getHours();
+        let hours = n.getHours() % 12 || 12;
         let minutes = n.getMinutes();
         let seconds = n.getSeconds();
 
@@ -56,3 +56,10 @@ function donateNowButton (id, amount, title)
 
 }
 
+function toggleButtons (id)
+{
+    document.getElementById("card-section").classList.add("hidden");
+    document.getElementById("history-section").classList.add("hidden");
+
+    document.getElementById(id).classList.remove("hidden")
+}

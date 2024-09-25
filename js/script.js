@@ -1,6 +1,5 @@
 document.getElementById("btn-history").addEventListener("click", function(){
-    document.getElementById("card-section").classList.add("hidden");
-    document.getElementById("history-section").classList.remove("hidden");
+    toggleButtons("history-section");
     document.getElementById("btn-card").classList.add("bg-transparent");
     document.getElementById("btn-card").classList.add("border-2");
     document.getElementById("btn-history").classList.add("bg-lime-400")
@@ -11,8 +10,7 @@ document.getElementById("btn-history").addEventListener("click", function(){
 
 
 document.getElementById("btn-card").addEventListener("click", function(){
-    document.getElementById("card-section").classList.remove("hidden");
-    document.getElementById("history-section").classList.add("hidden");
+    toggleButtons("card-section");
     document.getElementById("btn-card").classList.add("bg-lime-400");
     document.getElementById("btn-history").classList.remove("bg-lime-400");
     document.getElementById("btn-card").classList.remove("text-slate-500");
