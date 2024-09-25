@@ -8,7 +8,6 @@ document.getElementById("btn-history").addEventListener("click", function(){
 
 })
 
-
 document.getElementById("btn-card").addEventListener("click", function(){
     toggleButtons("card-section");
     document.getElementById("btn-card").classList.add("bg-lime-400");

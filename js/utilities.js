@@ -53,7 +53,6 @@ function donateNowButton (id, amount, title)
         document.getElementById('my_modal_1').close();
     }
     
-
 }
 
 function toggleButtons (id)
